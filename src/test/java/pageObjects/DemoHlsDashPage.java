@@ -13,45 +13,116 @@ public class DemoHlsDashPage extends DriversFactory {
 	public WebDriver driver;
 	public static final String ANSI_RED_TEXT = "\033[31m";
 	public static final String ANSI_GREEN_TEXT = "\033[32;1;2m";
-	
+
 	public DemoHlsDashPage(WebDriver driver) {
 		this.driver = driver;
-		 PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);
+	}
+
+	// h1 title hls dash player
+	@FindBy(how = How.XPATH, using = "//h1[@class='no-margin']")
+	WebElement elmh1Title;
+
+	// Verify h1 title
+	public void ver_h1tit_dash(String expH1title) {
+		String strH1title = elmh1Title.getText().toString();
+		if (expH1title.equalsIgnoreCase(strH1title)) {
+			Assert.assertEquals(expH1title, strH1title);
+			System.out.println(ANSI_GREEN_TEXT + "" + strH1title + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expH1title, strH1title);
+			System.out.println(ANSI_RED_TEXT + "" + strH1title + "" + expH1title + "" + "Title Not Found");
+		}
+	}
+
+	// Find content
+	@FindBy(how = How.XPATH, using = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/p[1]")
+	WebElement elmContent;
+
+	// Verify Content
+	public void ver_content_dash(String expContent) {
+		String strContent = elmContent.getText().toString();
+		if (expContent.equalsIgnoreCase(strContent)) {
+			Assert.assertEquals(expContent, strContent, "Matched");
+			System.out.println(ANSI_GREEN_TEXT + "" + expContent + "" + strContent + "" + "Title Found");
+		} else {
+			Assert.assertNotEquals("Not Matched", expContent, strContent);
+			System.out.println(ANSI_RED_TEXT + "" + expContent + "" + strContent + "" + "Title Not Found");
+		}
+	}
+
+	// Event logs HLS DASH
+	@FindBy(how = How.XPATH, using = "/div[@class='eventlog scrollableheight']")
+	WebElement elmEventlogs;
+
+	// Verify event logs text contains true or not
+	public void ver_eventlog(String expText) {
+		String strContent = elmEventlogs.getText().toString();
+		if (strContent.contains(expText)) {
+			Assert.assertTrue(strContent.contains(expText));
+			System.out.println(ANSI_GREEN_TEXT + "" + expText + "" + strContent + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expText, strContent);
+			System.out.println(ANSI_RED_TEXT + "" + expText + "" + strContent + "" + "Title Not Found");
+		}
+	}
+	//current time display
+	@FindBy(how=How.XPATH,using="//div[contains(@class,'vjs-current-time-display')]")
+	WebElement elmctime;
+	
+	//verify play current time
+	public void ver_ctime(String exptime) {
+		String strtime = elmctime.getText().toString();
+		if (strtime.contains(exptime)) {
+			Assert.assertTrue(strtime.contains(exptime));
+			System.out.println(ANSI_GREEN_TEXT + "" + exptime + "" + strtime + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", exptime, strtime);
+			System.out.println(ANSI_RED_TEXT + "" + exptime + "" + strtime + "" + "Title Not Found");
+		}
 	}
 	
-	//h1 title hls dash player
-	@FindBy(how=How.XPATH,using="//h1[@class='no-margin']")
-	WebElement elmh1Title;
+	//Whole duration of the vedio while playing
+	@FindBy(how=How.XPATH,using="//div[contains(@class,'vjs-duration vjs-time-control vjs-control')]")
+	WebElement elmduration;//div[contains(@class,'theo-secondary-color vjs-control-bar')]//button[4]
 	
-	//Verify h1 title
-	public void ver_h1tit_dash(String expH1title){
-		 String strH1title=elmh1Title.getText().toString();
-   	if(expH1title.equalsIgnoreCase(strH1title)){
-   		Assert.assertEquals(expH1title, strH1title);
-   		System.out.println(ANSI_GREEN_TEXT + ""+ strH1title+"" + "Title Found");
-   	}else{
-   		Assert.assertNotSame("Not Matched", expH1title, strH1title);
-   		System.out.println(ANSI_RED_TEXT + ""+ strH1title+""+expH1title+ "" + "Title Not Found");
-   	}
-   }
+	//Verify the time
+	public void ver_dur(String expDur) {
+		String strDur = elmduration.getText().toString();
+		if (expDur.equalsIgnoreCase(strDur)) {
+			Assert.assertEquals(expDur, strDur, "Matched");
+			System.out.println(ANSI_GREEN_TEXT + "" + expDur + "" + strDur + "" + "Title Found");
+		} else {
+			Assert.assertNotEquals("Not Matched", expDur, strDur);
+			System.out.println(ANSI_RED_TEXT + "" + expDur + "" + strDur + "" + "Title Not Found");
+		}
+	}
+	
+	//Sub Tiltes Element
+	@FindBy(how=How.XPATH,using="//div[contains(@class,'theo-secondary-color vjs-control-bar')]//button[4]")
+	WebElement elmsubtit;
+	
+	//Click on Subtitle
+	public void clk_subtit() throws Throwable{
+		elmsubtit.click();
+	}
+	
+	//chinees click element
+	@FindBy(how=How.XPATH,using="//ul[contains(@class,'vjs-menu-content theo-menu-content')]//li[1]//div[1]//div[1]")
+	WebElement elmSelChinees;
+	
+	//Click on chinees option as subtitle
+	public void clk_subtit_chinios() throws Throwable{
+		elmSelChinees.click();
+	}
+	
+	@FindBy(how=How.XPATH,using="//ul[contains(@class,'vjs-menu-content theo-menu-content')]//li[2]//div[1]//div[1]")
+	WebElement elmFrench;
 	
 	
-	//Find content
-	@FindBy(how=How.XPATH,using="/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/p[1]")
-	WebElement elmContent;
-	
-	//Verify Content
-	public void ver_content_dash(String expContent){
-		 String strContent=elmContent.getText().toString();
-  	if(expContent.equalsIgnoreCase(strContent)){
-  		Assert.assertEquals(expContent, strContent,"Matched");
-  		System.out.println(ANSI_GREEN_TEXT + ""+ expContent+""+strContent+ "" + "Title Found");
-  	}else{
-  		Assert.assertNotSame("Not Matched", expContent, strContent);
-  		System.out.println(ANSI_RED_TEXT + ""+ expContent+""+strContent+ "" + "Title Not Found");
-  	}
-  }
 	
 	
 	
+	
+
 }

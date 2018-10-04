@@ -31,7 +31,8 @@ Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Click on UnMute From Play Chapter
-
+Then I Wait Vedio For Some Time
+Then I Close Browser
 Examples:
 |url|Browser|strFooterText|h1titleadj|adurl|vdurl|content1|content2|content3|vontent|adeventname|
 |https://demo.theoplayer.com|Chrome|Advertisement tester|THEOplayer 2.X: Advertisements Tester (VAST, VPAID, VMAP)|//cdn.theoplayer.com/demos/preroll.xml|//cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8|This advertisement tester allows you to preview ads in THEOplayer.|Switch between VAST and VPAID ads with an ad position, or test your ads in VMAP, using the configuration panel at the right.|Learn more about our different client side advertisement solutions|The content will resume|adbreakbegin|

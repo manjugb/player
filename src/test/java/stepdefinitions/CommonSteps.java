@@ -11,7 +11,7 @@ import pageObjects.Common;
 public class CommonSteps extends DriversFactory {
     
 	//Click First Time Play Option
-	@Then("^I Click First time Play Image Statistics$")
+	@Then("^I Click First time Play Image$")
 	public void clk_firstPlay()throws Throwable{
 		new Common(wd).clk_play_first();
 		

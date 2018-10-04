@@ -6,14 +6,22 @@ Then I Click On "<imageName>"Image Statistics
 Then I Wait For Some Time
 And I Verify DemoHlsDashPage "<h1title>"h1title
 Then I Click First time Play Image Statistics
-Then I Wait For Some Time
-Then I Wait For Some Time
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
 Then I Click on Pause From Play Chapter
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Click on Mute From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 And I Verify on Vedio Player "<ctime>"current time
 And I Verify on Vedio Player "<durtime>"end time
 Then I Click on Play From Play Chapter
+Then I Click on UnMute From Play Chapter
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Verify DemoHlsDashPage "<enventlog>"EventLog
 

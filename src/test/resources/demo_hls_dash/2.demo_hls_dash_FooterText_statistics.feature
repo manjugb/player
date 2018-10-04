@@ -5,7 +5,7 @@ Given I Go to "<url>" on "<Browser>"
 Then I Click On "<strText>"Footer Text
 Then I Wait For Some Time
 And I Verify DemoHlsDashPage "<h1title>"h1title
-Then I Click First time Play Image Statistics
+Then I Click First time Play Image
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time

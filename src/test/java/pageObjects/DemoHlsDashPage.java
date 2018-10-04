@@ -1,5 +1,14 @@
 package pageObjects;
+/* author:Manjunath Golla Bala
+ * desc:this class contains Stastic Page methods and elements
+ * features:Common Objects which call in DemoHlsDashPageSteps definition
+ * 
+ */
 
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+
+import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +22,8 @@ public class DemoHlsDashPage extends DriversFactory {
 	public WebDriver driver;
 	public static final String ANSI_RED_TEXT = "\033[31m";
 	public static final String ANSI_GREEN_TEXT = "\033[32;1;2m";
-
+	
+	
 	public DemoHlsDashPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -52,7 +62,7 @@ public class DemoHlsDashPage extends DriversFactory {
 	}
 
 	// Event logs HLS DASH
-	@FindBy(how = How.XPATH, using = "/div[@class='eventlog scrollableheight']")
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'eventlogcontainer testContainer')]")
 	WebElement elmEventlogs;
 
 	// Verify event logs text contains true or not
@@ -67,13 +77,16 @@ public class DemoHlsDashPage extends DriversFactory {
 		}
 	}
 	//current time display
-	@FindBy(how=How.XPATH,using="//div[contains(@class,'vjs-current-time-display')]")
+	@FindBy(how=How.XPATH,using="/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[3]/div[1]/div[1]/div[9]/div[3]/div[1]")
 	WebElement elmctime;
 	
 	//verify play current time
 	public void ver_ctime(String exptime) {
-		String strtime = elmctime.getText().toString();
+		
+		String strtime = elmctime.getText();
+		System.out.println(strtime);
 		if (strtime.contains(exptime)) {
+			//Assert.assertThat("123456", Matchers.strtime("^[0-9]+$"));
 			Assert.assertTrue(strtime.contains(exptime));
 			System.out.println(ANSI_GREEN_TEXT + "" + exptime + "" + strtime + "" + "Title Found");
 		} else {
@@ -83,12 +96,12 @@ public class DemoHlsDashPage extends DriversFactory {
 	}
 	
 	//Whole duration of the vedio while playing
-	@FindBy(how=How.XPATH,using="//div[contains(@class,'vjs-duration vjs-time-control vjs-control')]")
+	@FindBy(how=How.XPATH,using="/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[3]/div[1]/div[1]/div[9]/div[5]/div[1]")
 	WebElement elmduration;//div[contains(@class,'theo-secondary-color vjs-control-bar')]//button[4]
 	
 	//Verify the time
 	public void ver_dur(String expDur) {
-		String strDur = elmduration.getText().toString();
+		String strDur = elmduration.getAttribute("value");
 		if (expDur.equalsIgnoreCase(strDur)) {
 			Assert.assertEquals(expDur, strDur, "Matched");
 			System.out.println(ANSI_GREEN_TEXT + "" + expDur + "" + strDur + "" + "Title Found");

@@ -3,9 +3,20 @@ package stepdefinitions;
 import browserFactory.DriversFactory;
 import cucumber.api.java.en.Then;
 import pageObjects.Common;
-
+/* author:Manjunath Golla Bala
+ * desc:this class contains Gerkin annoation steps which calls into Gerkin language
+ * features:Common Objects which call in all the features
+ * 
+ */
 public class CommonSteps extends DriversFactory {
-
+    
+	//Click First Time Play Option
+	@Then("^I Click First time Play Image Statistics$")
+	public void clk_firstPlay()throws Throwable{
+		new Common(wd).clk_play_first();
+		
+	}
+	//
 	@Then("^I Click On \"([^\"]*)\"Image Statistics$")
 	public void clk_Image(String strImage) throws Throwable {
 		new Common(wd).clickAllHyperImages(strImage);
@@ -14,6 +25,11 @@ public class CommonSteps extends DriversFactory {
 	@Then("^I Wait For Some Time$")
 	public void waitfor() throws Throwable {
 		new Common(wd).waifortime();
+	}
+	
+	@Then("^I Wait Vedio For Some Time$")
+	public void waitforv() throws Throwable {
+		new Common(wd).waifortime_vedio();
 	}
 	
 	@Then("^I Click on Play From Play Chapter$")

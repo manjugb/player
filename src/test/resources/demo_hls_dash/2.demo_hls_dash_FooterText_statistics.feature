@@ -32,7 +32,6 @@ Then I Wait Vedio For Some Time
 Then I Click on UnMute From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
-
 Then I Close Browser
 
 Examples:

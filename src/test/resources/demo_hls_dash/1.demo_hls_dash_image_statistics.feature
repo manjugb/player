@@ -2,7 +2,7 @@ Feature:  As Demo User I Validate HLS DASH Player using Image Click with actions
 Scenario Outline: Validate links,texts ,Play and Pause actions and validate event logs when Play and Pause actions 
 
 Given I Go to "<url>" on "<Browser>"
-Then I Click On "<imageName>"Image Statistics
+Then I Click On "<imageName>"Image 
 Then I Wait For Some Time
 And I Verify DemoHlsDashPage "<h1title>"h1title
 Then I Click First time Play Image Statistics
@@ -24,6 +24,14 @@ Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Verify DemoHlsDashPage "<enventlog>"EventLog
+Then I Click on Play From Play Chapter
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
+Then I Click on UnMute From Play Chapter
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
 
 Then I Close Browser
 

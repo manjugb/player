@@ -17,11 +17,16 @@ public class CommonSteps extends DriversFactory {
 		
 	}
 	//
-	@Then("^I Click On \"([^\"]*)\"Image Statistics$")
+	@Then("^I Click On \"([^\"]*)\"Image$")
 	public void clk_Image(String strImage) throws Throwable {
 		new Common(wd).clickAllHyperImages(strImage);
 	}
 
+	@Then("^I Click On \"([^\"]*)\"Footer Text$")
+	public void clk_FooterText(String strFooterText) throws Throwable {
+		new Common(wd).clickAllHyperLinksName(strFooterText);
+	}
+	
 	@Then("^I Wait For Some Time$")
 	public void waitfor() throws Throwable {
 		new Common(wd).waifortime();

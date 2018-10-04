@@ -61,7 +61,7 @@ public class Common extends DriversFactory {
 	}
 	
 	public void waifortime_vedio() throws Throwable {
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 	}
 
 

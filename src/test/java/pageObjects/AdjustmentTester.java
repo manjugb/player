@@ -72,9 +72,10 @@ public class AdjustmentTester extends DriversFactory {
 		}
 	}
 
-	@FindBy(how=How.XPATH,using="//a[contains(text(),'Learn more about our different client side adverti')]")
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Learn more about our different client side adverti')]")
 	WebElement elmContent3;
-	//Verify content3
+
+	// Verify content3
 	public void vr_content3(String strecon3) throws Throwable {
 		String strcont3 = elmh1Title.getText().toString();
 		if (strecon3.equalsIgnoreCase(strcont3)) {
@@ -85,11 +86,12 @@ public class AdjustmentTester extends DriversFactory {
 			System.out.println(ANSI_RED_TEXT + "" + strcont3 + "" + strecon3 + "" + "Title Not Found");
 		}
 	}
-	
-	//Events Log for ad breaks
-	@FindBy(how=How.XPATH,using="//table[contains(@class,'events-log')]")
+
+	// Events Log for ad breaks
+	@FindBy(how = How.XPATH, using = "//table[contains(@class,'events-log')]")
 	WebElement elmeventlog;
-	public void vr_eventlog(String strEventname) throws Throwable{
+
+	public void vr_eventlog(String strEventname) throws Throwable {
 		String strContent = elmeventlog.getText().toString();
 		if (strContent.contains(strEventname)) {
 			Assert.assertTrue(strContent.contains(strEventname));
@@ -98,14 +100,14 @@ public class AdjustmentTester extends DriversFactory {
 			Assert.assertNotSame("Not Matched", strEventname, strContent);
 			System.out.println(ANSI_RED_TEXT + "" + strEventname + "" + strContent + "" + "Title Not Found");
 		}
-		
+
 	}
-	
-	//Ad content on vedio
-	@FindBy(how=How.XPATH,using="//div[contains(@class,'theo-player-wrapper')]//div[17]")
+
+	// Ad content on vedio
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'theo-player-wrapper')]//div[17]")
 	WebElement elmvadcontnt;
-	
-	public void vr_vcont(String streContent) throws Throwable{
+
+	public void vr_vcont(String streContent) throws Throwable {
 		String strvContent = elmeventlog.getText().toString();
 		if (strvContent.contains(streContent)) {
 			Assert.assertTrue(strvContent.contains(streContent));
@@ -114,48 +116,85 @@ public class AdjustmentTester extends DriversFactory {
 			Assert.assertNotSame("Not Matched", streContent, strvContent);
 			System.out.println(ANSI_RED_TEXT + "" + streContent + "" + strvContent + "" + "Title Not Found");
 		}
-		
+
 	}
-	
-	//AdURL
-	@FindBy(how=How.XPATH,using="//input[contains(@value,'//cdn.theoplayer.com/demos/preroll.xml')]")
+
+	// AdURL
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'//cdn.theoplayer.com/demos/preroll.xml')]")
 	WebElement adurl;
-	
-	public void ver_adurl(String exdurl)throws Throwable{
-				String actdurl = adurl.getAttribute("value");
-			if (exdurl.equalsIgnoreCase(actdurl)) {
-				Assert.assertEquals(exdurl, actdurl);
-				System.out.println(ANSI_GREEN_TEXT + "" + exdurl + "" + "Title Found");
-			} else {
-				Assert.assertNotEquals("Not Matched", exdurl, actdurl);
-				System.out.println(ANSI_RED_TEXT + "" + actdurl + "" + exdurl + "" + "Title Not Found");
-			}
-			
-			
+
+	public void ver_adurl(String exdurl) throws Throwable {
+		String actdurl = adurl.getAttribute("value");
+		if (exdurl.equalsIgnoreCase(actdurl)) {
+			Assert.assertEquals(exdurl, actdurl);
+			System.out.println(ANSI_GREEN_TEXT + "" + exdurl + "" + "Title Found");
+		} else {
+			Assert.assertNotEquals("Not Matched", exdurl, actdurl);
+			System.out.println(ANSI_RED_TEXT + "" + actdurl + "" + exdurl + "" + "Title Not Found");
 		}
-	
-	
-	@FindBy(how=How.XPATH,using="//input[contains(@value,'//cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8')]")
+
+	}
+
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'//cdn.theoplayer.com/video/big_buck_bunny/big_buck_bunny_metadata.m3u8')]")
 	WebElement vdurl;
-	
-	public void ver_vdurl(String exvdurl)throws Throwable{
-				String actvdurl = vdurl.getAttribute("value");
-			if (exvdurl.equalsIgnoreCase(actvdurl)) {
-				Assert.assertEquals(exvdurl, actvdurl);
-				System.out.println(ANSI_GREEN_TEXT + "" + exvdurl + "" + "Title Found");
-			} else {
-				Assert.assertNotEquals("Not Matched", exvdurl, actvdurl);
-				System.out.println(ANSI_RED_TEXT + "" + actvdurl + "" + exvdurl + "" + "Title Not Found");
-			}
-			
-			
+
+	public void ver_vdurl(String exvdurl) throws Throwable {
+		String actvdurl = vdurl.getAttribute("value");
+		if (exvdurl.equalsIgnoreCase(actvdurl)) {
+			Assert.assertEquals(exvdurl, actvdurl);
+			System.out.println(ANSI_GREEN_TEXT + "" + exvdurl + "" + "Title Found");
+		} else {
+			Assert.assertNotEquals("Not Matched", exvdurl, actvdurl);
+			System.out.println(ANSI_RED_TEXT + "" + actvdurl + "" + exvdurl + "" + "Title Not Found");
 		}
-	
- //Radio Buttons in Adjustment	
-	
-	
-		
+
+	}
+
+	// Radio Buttons in Adjustment
+	// vmap
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'vmap')]")
+	WebElement elmvmap;
+
+	// click vmap
+	public void clk_vmap() throws Throwable {
+		elmvmap.click();
+	}
+
+	// VPAID
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'vpaid')]")
+	WebElement elmvpaid;
+
+	// click vmap
+	public void clk_vpaid() throws Throwable {
+		elmvpaid.click();
+	}
+
+//Ad Positions
+	// Mid-Roll
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'00:00:15')]")
+	WebElement elmmidroll;
+
+	// click vmap
+	public void clk_midroll() throws Throwable {
+		elmmidroll.click();
+	}
+
+	// Post Roll
+	@FindBy(how = How.XPATH, using = "//input[contains(@value,'end')]")
+	WebElement elmpostroll;
+
+	// click vmap
+	public void clk_postroll() throws Throwable {
+		elmpostroll.click();
+	}
+	//Update Button
+	@FindBy(how=How.XPATH,using="//button[contains(@class,'try-button')]")
+	WebElement elmupdate;
+	//Click update button
+	public void clk_updatebut()throws Throwable{
+		elmupdate.click();
 	}
 	
+	
 
-
+}

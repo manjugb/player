@@ -1,4 +1,4 @@
-Feature:  As Demo User I Validate Adjustement Tester using Footer Text Click with actions Play and Pause
+Feature:  As a Demo User I Validate Adjustement Tester using Footer Text Click with actions Play and Pause
 Scenario Outline: Validate links,texts ,Play and Pause actions and validate event logs when Play and Pause actions 
 
 Given I Go to "<url>" on "<Browser>"

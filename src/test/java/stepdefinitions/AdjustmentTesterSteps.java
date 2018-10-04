@@ -50,5 +50,32 @@ public class AdjustmentTesterSteps extends DriversFactory{
 		public void ver_vdrl_adj(String expvdurl) throws Throwable{
 			new AdjustmentTester(wd).ver_vdurl(expvdurl);
 		}
+		
+  //Click Radio Buttons
+		@Then("^I Select on Midroll$")
+		public void clk_midroll() throws Throwable{
+			new AdjustmentTester(wd).clk_midroll();
+		}
+		
+		@Then("^I Select on Postroll$")
+		public void clk_postroll() throws Throwable{
+			new AdjustmentTester(wd).clk_postroll();
+		}
+		
+		@Then("^I Select on VMAP$")
+		public void clk_vmp() throws Throwable{
+			new AdjustmentTester(wd).clk_vmap();
+		}
+		
+		@Then("^I Select on VPAID$")
+		public void clk_vpd() throws Throwable{
+			new AdjustmentTester(wd).clk_vpaid();
+		}
+		
+		@Then("^I Click on Update Button$")
+		public void clk_upd() throws Throwable{
+			new AdjustmentTester(wd).clk_updatebut();
+		}
+		
 
 }

@@ -1,4 +1,4 @@
-Feature:  As Demo User I will go look and home page verify information about Theo Player
+Feature:  As a Demo User I will go look and home page verify information about Theo Player
 Scenario Outline: Validate links and Text from the home Page
 
 Given I Go to "<url>" on "<Browser>"

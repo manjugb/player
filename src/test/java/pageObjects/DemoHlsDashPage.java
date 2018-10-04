@@ -82,7 +82,6 @@ public class DemoHlsDashPage extends DriversFactory {
 	
 	//verify play current time
 	public void ver_ctime(String exptime) {
-		
 		String strtime = elmctime.getText();
 		System.out.println(strtime);
 		if (strtime.contains(exptime)) {
@@ -102,6 +101,7 @@ public class DemoHlsDashPage extends DriversFactory {
 	//Verify the time
 	public void ver_dur(String expDur) {
 		String strDur = elmduration.getAttribute("value");
+		System.out.println(strDur);
 		if (expDur.equalsIgnoreCase(strDur)) {
 			Assert.assertEquals(expDur, strDur, "Matched");
 			System.out.println(ANSI_GREEN_TEXT + "" + expDur + "" + strDur + "" + "Title Found");

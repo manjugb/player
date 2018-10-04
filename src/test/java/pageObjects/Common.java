@@ -99,8 +99,9 @@ public class Common extends DriversFactory {
     
     //Click mute and mute options
     public void clk_mute_unmute() throws Throwable{
-    	elmute_unmute.click();;
+    	elmute_unmute.click();
     }
+    
     
     
     

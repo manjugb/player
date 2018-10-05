@@ -45,7 +45,7 @@ public class AdjustmentTester extends DriversFactory {
 	// Verify Content
 	public void vr_content(String strexcont1) throws Throwable {
 
-		String strcont1 = elmh1Title.getText().toString();
+		String strcont1 = elmcontent1.getText().toString();
 		if (strexcont1.equalsIgnoreCase(strcont1)) {
 			Assert.assertEquals(strexcont1, strcont1);
 			System.out.println(ANSI_GREEN_TEXT + "" + strcont1 + "" + "Title Found");
@@ -62,7 +62,7 @@ public class AdjustmentTester extends DriversFactory {
 	// Verify content2
 	public void vr_conte2(String strexcont2) throws Throwable {
 
-		String strcont2 = elmh1Title.getText().toString();
+		String strcont2 = elmcont2.getText().toString();
 		if (strexcont2.equalsIgnoreCase(strcont2)) {
 			Assert.assertEquals(strexcont2, strcont2);
 			System.out.println(ANSI_GREEN_TEXT + "" + strcont2 + "" + "Title Found");
@@ -77,7 +77,7 @@ public class AdjustmentTester extends DriversFactory {
 
 	// Verify content3
 	public void vr_content3(String strecon3) throws Throwable {
-		String strcont3 = elmh1Title.getText().toString();
+		String strcont3 = elmContent3.getText().toString();
 		if (strecon3.equalsIgnoreCase(strcont3)) {
 			Assert.assertEquals(strecon3, strcont3);
 			System.out.println(ANSI_GREEN_TEXT + "" + strcont3 + "" + "Title Found");
@@ -108,7 +108,7 @@ public class AdjustmentTester extends DriversFactory {
 	WebElement elmvadcontnt;
 
 	public void vr_vcont(String streContent) throws Throwable {
-		String strvContent = elmeventlog.getText().toString();
+		String strvContent = elmvadcontnt.getText().toString();
 		if (strvContent.contains(streContent)) {
 			Assert.assertTrue(strvContent.contains(streContent));
 			System.out.println(ANSI_GREEN_TEXT + "" + streContent + "" + strvContent + "" + "Title Found");

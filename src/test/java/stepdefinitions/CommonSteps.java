@@ -23,8 +23,8 @@ public class CommonSteps extends DriversFactory {
 	}
 
 	@Then("^I Click On \"([^\"]*)\"Footer Text$")
-	public void clk_FooterText(String strFooterText) throws Throwable {
-		new Common(wd).clickAllHyperLinksName(strFooterText);
+	public void clk_FooterText(String strFText) throws Throwable {
+		new Common(wd).clickAllHyperLinksName(strFText);
 	}
 	
 	@Then("^I Wait For Some Time$")
@@ -56,5 +56,15 @@ public class CommonSteps extends DriversFactory {
 	public void clk_unmute() throws Throwable{
 		new Common(wd).clk_mute_unmute();
 	}
+	
+	@Then("^I Scroll Bar$")
+	public void scr_ll() throws Throwable{
+		new Common(wd).scroll_bar();
+	}
+	
+	/*@Then("^I click on \"([^\"]*)\"Text$")
+	public void clicklinktext(String strText) throws Throwable{
+		new Common(wd).clickLinkByText(strText);
+	}*/
 
 }

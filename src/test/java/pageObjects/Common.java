@@ -1,11 +1,15 @@
 package pageObjects;
 
+import java.util.Iterator;
+import java.util.List;
+
 /* author:Manjunath Golla Bala
  * desc:this class contains Common methods and elements
  * features:Common Objects which call in all the features
  * 
  */
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,11 +34,11 @@ public class Common extends DriversFactory {
 
 	// Click links text
 	public void clickAllHyperLinksName(String strlinkName) {
-		int numberOfElementsFound = getNumberOfElementsFound(By.linkText(strlinkName));
+		int numberOfElementsFound = getNumberOfElementsFound(By.xpath(strlinkName));
 		System.out.println(numberOfElementsFound);
 		for (int pos = 0; pos < numberOfElementsFound; pos++) {
-			getElementWithIndex(By.tagName(strlinkName), pos).click();
-			wd.navigate().back();
+			getElementWithIndex(By.xpath(strlinkName), pos).click();
+			
 		}
 	}
 
@@ -44,7 +48,7 @@ public class Common extends DriversFactory {
 		System.out.println(numberOfElementsFound);
 		for (int pos = 0; pos < numberOfElementsFound; pos++) {
 			getElementWithIndex(By.xpath(imageName), pos).click();
-			// wd.navigate().back();
+			
 		}
 	}
 
@@ -71,9 +75,12 @@ public class Common extends DriversFactory {
 
 	// Click first time vedio
 	public void clk_play_first() throws Throwable {
-		//elmFirsPlayclick.click();
-		Actions builder = new Actions(driver);
-       	builder.moveToElement(elmFirsPlayclick).click().perform();
+	      	
+       	Actions action = new Actions(driver);
+        action.moveToElement(elmFirsPlayclick).perform(); 
+        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        //wait.until(ExpectedConditions.elementToBeClickable(elmFirsPlayclick));
+        elmFirsPlayclick.click();
 	}
 
 	// Find play button element from Play Chapter
@@ -99,12 +106,37 @@ public class Common extends DriversFactory {
     
     //Click mute and mute options
     public void clk_mute_unmute() throws Throwable{
-    	elmute_unmute.click();
+    	//elmute_unmute.click();
+    	
+    	Actions action = new Actions(driver);
+        action.moveToElement(elmute_unmute).perform(); 
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.elementToBeClickable(elmute_unmute));
+        elmute_unmute.click();
     }
     
+    //Scroll Bar
+    public void scroll_bar() throws Throwable{
+    	JavascriptExecutor js = (JavascriptExecutor) driver;  
+    	js.executeScript("window.scrollBy(0,100)");
+
+    }
     
-    
-    
-    
-    
+
+    //Click linnks
+    public void clickLinkByText(String strText) {
+        List<WebElement> anchors = driver.findElements(By.tagName("a"));
+        Iterator<WebElement> i = anchors.iterator();
+        while(i.hasNext()) {
+            WebElement anchor = i.next();
+            if(anchor.getAttribute("href").contains(strText)) {
+                anchor.click();
+                break;}
+            
+            }
+         }
+
+
+
+
 }

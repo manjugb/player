@@ -33,8 +33,8 @@ successfully import
 Jenkins:
 --------
 Before running this build to make sure java and maven should be installed under manage jenkins
-or can be configured local system java and maven using manage jenkins
-steps 
+or can be configured local system java and maven using manage jenkins->Global tool configuration
+
 
 
 

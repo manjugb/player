@@ -1,8 +1,10 @@
 package pageObjects;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -52,7 +54,51 @@ public class RelatedContent extends DriversFactory{
 		}
 		
 		
-		//aside[contains(@class,'floatleft othertests')]
+		@FindBy(how=How.XPATH,using="//h1[@class='demoindexheader page-center']")
+		WebElement elmh1rel;
+	//h1 title
+		public void vr_h1title_adv_rel(String strph1rtitle) throws Throwable{
+			String strh1rtitle = elmh1rel.getText().toString();
+			if (strph1rtitle.equalsIgnoreCase(strh1rtitle)) {
+				Assert.assertEquals(strph1rtitle, strh1rtitle);
+				System.out.println(ANSI_GREEN_TEXT + "" + strh1rtitle + "" + "Title Found");
+			} else {
+				Assert.assertNotSame("Not Matched", strph1rtitle, strh1rtitle);
+				System.out.println(ANSI_RED_TEXT + "" + strph1rtitle + "" + strph1rtitle + "" + "Title Not Found");
+			}
+		}
 
+		
+		//Scroll Bar
+	    public void scroll_bar_related() throws Throwable{
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;  
+	    	js.executeScript("window.scrollBy(0,700)");
+
+	    }
+	    
+	    @FindBy(how=How.XPATH,using="//div[@id='yLa1383']//button[contains(@title,'Play Video')]")
+	    WebElement elmylaplay;
+	    
+	    public void clickylaplay() throws Throwable{
+	    	Actions action = new Actions(driver);
+	        action.moveToElement(elmylaplay).perform(); 
+	        //WebDriverWait wait = new WebDriverWait(driver, 10);
+	        //wait.until(ExpectedConditions.elementToBeClickable(elmFirsPlayclick));
+	        elmylaplay.click();
+	    }
+	    
+	    @FindBy(how=How.XPATH,using="//div[@id='yLa2670']//button[contains(@title,'Play Video')]")
+	    WebElement elmylaplay1;
+	    
+	    public void clickylaplay1() throws Throwable{
+	    	Actions action = new Actions(driver);
+	        action.moveToElement(elmylaplay1).perform(); 
+	        //WebDriverWait wait = new WebDriverWait(driver, 10);
+	        //wait.until(ExpectedConditions.elementToBeClickable(elmFirsPlayclick));
+	        elmylaplay1.click();
+	    }
+	    
 	
 }
+//Related Content:Advertising
+   

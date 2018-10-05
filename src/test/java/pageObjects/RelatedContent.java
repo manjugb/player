@@ -1,5 +1,7 @@
 package pageObjects;
 
+import static org.assertj.core.api.Assertions.*;
+
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -99,6 +101,54 @@ public class RelatedContent extends DriversFactory{
 	    }
 	    
 	
-}
-//Related Content:Advertising
+
+//Related Content:Audio ID3 Metadata
+  //h1 title
+  @FindBy(how=How.XPATH,using="//h1[@class='demoindexheader page-center']")
+  WebElement elmh1audtitle;
+  public void vr_h1title_aud_rel(String streaudtitle) throws Throwable{
+		String strah1rtitle = elmh1audtitle.getText().toString();
+		if (streaudtitle.equalsIgnoreCase(strah1rtitle)) {
+			Assert.assertEquals(streaudtitle, strah1rtitle);
+			System.out.println(ANSI_GREEN_TEXT + "" + strah1rtitle + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", streaudtitle, strah1rtitle);
+			System.out.println(ANSI_RED_TEXT + "" + streaudtitle + "" + strah1rtitle + "" + "Title Not Found");
+		}
+	}
+
+  
+  
+  //Song Info
+   @FindBy(how=How.XPATH,using="//p[@class='song-artist']")
+   WebElement elmsongartst;
+   public void ver_songartst(String expsongartst) {
+		String strSongartist = elmsongartst.getText().toString();
+		
+		if (expsongartst.equalsIgnoreCase(strSongartist)) {
+			Assert.assertEquals(expsongartst, strSongartist);
+			System.out.println(ANSI_GREEN_TEXT + "" + strSongartist + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expsongartst, strSongartist);
+			System.out.println(ANSI_RED_TEXT + "" + expsongartst + "" + strSongartist + "" + "Title Not Found");
+		}
+	}
    
+   //h3 song title
+   @FindBy(how=How.XPATH,using="//h3[@class='song-title']")
+   WebElement elmh3songtitle;
+   public void ver_songtit(String expsongtit) {
+		String strSongtitle = elmh3songtitle.getText().toString();
+		
+		if (expsongtit.equalsIgnoreCase(strSongtitle)) {
+			Assert.assertEquals(expsongtit, strSongtitle);
+			System.out.println(ANSI_GREEN_TEXT + "" + strSongtitle + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expsongtit, strSongtitle);
+			System.out.println(ANSI_RED_TEXT + "" + expsongtit + "" + strSongtitle + "" + "Title Not Found");
+		}
+	}
+   
+   
+ 
+  }

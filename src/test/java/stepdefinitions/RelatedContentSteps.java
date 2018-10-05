@@ -39,6 +39,18 @@ public class RelatedContentSteps extends DriversFactory {
 		new RelatedContent(wd).clickylaplay1();
 		
 	}
-
+//Audio ID3 MA
+	@Then("^I Verify \"([^\"]*)\"audiTitle$")
+    public void vr_adhtitle(String strexpadtitle) throws Throwable{
+		new RelatedContent(wd).vr_h1title_aud_rel(strexpadtitle);
+	}
+	@Then("^I Verify \"([^\"]*)\"songArtist$")
+    public void vr_songartist(String strexsonginfo) throws Throwable{
+		new RelatedContent(wd).ver_songartst(strexsonginfo);
+	}
+	@Then("^I Verify \"([^\"]*)\"songTitle$")
+    public void vr_songinfo(String strexsonginfo) throws Throwable{
+		new RelatedContent(wd).ver_songtit(strexsonginfo);
+	}
 
 }

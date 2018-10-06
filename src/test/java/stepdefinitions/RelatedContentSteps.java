@@ -28,6 +28,13 @@ public class RelatedContentSteps extends DriversFactory {
 		new RelatedContent(wd).scroll_bar_related();
 	}
 	
+	@Then("^I Scroll Vertically protected CONTENT$")
+	public void vr_scrolpPR() throws Throwable{
+		
+		new RelatedContent(wd).scroll_bar_related_prot();
+	}
+	
+	
 	@Then("^I Scroll Vertically ChromeCast$")
 	public void vr_scroll_crome() throws Throwable{
 		
@@ -85,6 +92,17 @@ public class RelatedContentSteps extends DriversFactory {
 	public void ver_nt(String expNote) throws Throwable{
 		new RelatedContent(wd).ver_note(expNote);
 	}
+	
+	@Then("^I Click and Pause$")
+	public void ver_clik() throws Throwable{
+		new RelatedContent(wd).clk_play_pause_protect();
+	}
+	
+	@Then("^I Verify \"([^\"]*)\"DRM h1Title$")
+	public void drm_title(String expdrtitle) throws Throwable{
+		new RelatedContent(wd).ver_drmtitle(expdrtitle);
+	}
+	
 	
 
 }

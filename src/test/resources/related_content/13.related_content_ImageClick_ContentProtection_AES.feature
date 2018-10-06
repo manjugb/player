@@ -7,20 +7,19 @@ Then I Wait For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Click On "<demolink>"Footer Text
+Then I Scroll Vertically protected CONTENT
 Then I Should Select "<listvalue>"listValue
 Then I Wait For Some Time
 Then I Wait For Some Time
 And I Verify "<Note>"Note
-Then I Click First time Play Image
-Then I Wait Vedio For Some Time
-Then I Wait Vedio For Some Time
-Then I Click on Play From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Click on Pause From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
-Then I Click on Mute From Play Chapter
+Then I Click and Pause
+Then I Wait Vedio For Some Time
+Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time

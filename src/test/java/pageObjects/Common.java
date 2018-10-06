@@ -84,8 +84,8 @@ public class Common extends DriversFactory {
 	}
 
 	// Find play button element from Play Chapter
-    @FindBy(how=How.XPATH,using="//div[@class='theo-player-wrapper']//div[9]//button[1]")
-    WebElement elmPlay_Pause;
+    @FindBy(how=How.XPATH,using="//div[contains(@class,'theo-player-wrapper')]//div[9]//button[1]")
+     WebElement elmPlay_Pause;
     
     //Click Play or Pause using this method
     public void clk_play_pause() throws Throwable{

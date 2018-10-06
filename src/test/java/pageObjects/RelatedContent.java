@@ -10,7 +10,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import browserFactory.DriversFactory;
 
@@ -83,6 +85,12 @@ public class RelatedContent extends DriversFactory{
 	    public void scroll_bar_related_chrome() throws Throwable{
 	    	JavascriptExecutor js = (JavascriptExecutor) driver;  
 	    	js.executeScript("window.scrollBy(0,1100)");
+
+	    }
+	    
+	    public void scroll_bar_related_prot() throws Throwable{
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;  
+	    	js.executeScript("window.scrollBy(0,300)");
 
 	    }
 	    
@@ -190,7 +198,7 @@ public class RelatedContent extends DriversFactory{
    
    public void listSection(String value) throws Throwable{
 	   Select dropdown = new Select(listSelect);
-	   dropdown.selectByValue(value);
+	   dropdown.selectByVisibleText(value);
    }
    
    //Verify Note:
@@ -209,5 +217,33 @@ public class RelatedContent extends DriversFactory{
 		}
 	}
    
+   //Click Play Protect Content
+   @FindBy(how=How.XPATH,using=" //div[contains(@class,'theo-player-wrapper')]//div[9]//button[1]")
+   WebElement clickplay_protect;
+   public void clk_play_pause_protect() throws Throwable{
+   	//elmPlay_Pause.click();
+   	/*Actions builder = new Actions(driver);
+      	builder.moveToElement(elmPlay_Pause).click().perform();*/
+      	
+      	Actions action = new Actions(driver);
+       action.moveToElement(clickplay_protect).perform(); 
+       WebDriverWait wait = new WebDriverWait(driver, 30);
+       wait.until(ExpectedConditions.elementToBeClickable(clickplay_protect));
+       clickplay_protect.click();
+   }
+   
+   @FindBy(how=How.XPATH, using="//h1[contains(@class,'demoindexheader page-center')]")
+   WebElement elmdrmh1title;
+   public void ver_drmtitle(String expdrmtitl) {
+		String strdtitle = elmdrmh1title.getText().toString();
+		
+		if (expdrmtitl.equalsIgnoreCase(strdtitle)) {
+			Assert.assertEquals(expdrmtitl, strdtitle);
+			System.out.println(ANSI_GREEN_TEXT + "" + strdtitle + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expdrmtitl, strdtitle);
+			System.out.println(ANSI_RED_TEXT + "" + expdrmtitl + "" + strdtitle + "" + "Title Not Found");
+		}
+	}
  
   }

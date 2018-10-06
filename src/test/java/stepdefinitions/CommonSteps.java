@@ -3,11 +3,7 @@ package stepdefinitions;
 import browserFactory.DriversFactory;
 import cucumber.api.java.en.Then;
 import pageObjects.Common;
-/* author:Manjunath Golla Bala
- * desc:this class contains Gerkin annoation steps which calls into Gerkin language
- * features:Common Objects which call in all the features
- * 
- */
+
 public class CommonSteps extends DriversFactory {
     
 	//Click First Time Play Option

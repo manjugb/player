@@ -245,5 +245,31 @@ public class RelatedContent extends DriversFactory{
 			System.out.println(ANSI_RED_TEXT + "" + expdrmtitl + "" + strdtitle + "" + "Title Not Found");
 		}
 	}
- 
+   
+//Fast Channel Switching
+   //switchbuttons
+   //Azure
+   @FindBy(how=How.XPATH,using="//button[@class='btnDemo actived']")
+   WebElement elmzurebut;
+   
+   public void azurclik() throws Throwable{
+	   elmzurebut.click();
+   }
+   
+   @FindBy(how=How.XPATH,using="//button[contains(text(),'Child of the 90s')]")
+   WebElement elmchildbut;
+   
+   public void childclik() throws Throwable{
+	   elmchildbut.click();
+   }
+   
+   @FindBy(how=How.XPATH,using=" //button[contains(text(),'Tears of steel')]")
+   WebElement elmtearof;
+   
+   public void tearsclik() throws Throwable{
+	   elmtearof.click();
+   }
+   
+   
+   
   }

@@ -1,14 +1,5 @@
 package pageObjects;
-/* author:Manjunath Golla Bala
- * desc:this class contains Stastic Page methods and elements
- * features:Common Objects which call in DemoHlsDashPageSteps definition
- * 
- */
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
-
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -130,12 +121,5 @@ public class DemoHlsDashPage extends DriversFactory {
 	}
 	
 	@FindBy(how=How.XPATH,using="//ul[contains(@class,'vjs-menu-content theo-menu-content')]//li[2]//div[1]//div[1]")
-	WebElement elmFrench;
-	
-	
-	
-	
-	
-	
-
+WebElement elmFrench;
 }

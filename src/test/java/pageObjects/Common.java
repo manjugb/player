@@ -3,11 +3,6 @@ package pageObjects;
 import java.util.Iterator;
 import java.util.List;
 
-/* author:Manjunath Golla Bala
- * desc:this class contains Common methods and elements
- * features:Common Objects which call in all the features
- * 
- */
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

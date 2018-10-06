@@ -98,10 +98,26 @@ public class RelatedContentSteps extends DriversFactory {
 		new RelatedContent(wd).clk_play_pause_protect();
 	}
 	
-	@Then("^I Verify \"([^\"]*)\"DRM h1Title$")
-	public void drm_title(String expdrtitle) throws Throwable{
-		new RelatedContent(wd).ver_drmtitle(expdrtitle);
+	@Then("^I Click On Azure Stream$")
+	public void ver_az_clik() throws Throwable{
+		new RelatedContent(wd).azurclik();
 	}
+	
+	@Then("^I Click On Child of 90s$")
+	public void ver_child_clik() throws Throwable{
+		new RelatedContent(wd).childclik();
+	}
+	
+	@Then("^I Click On Tears of Steal$")
+	public void ver_tears_clik() throws Throwable{
+		new RelatedContent(wd).tearsclik();
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 

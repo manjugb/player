@@ -3,9 +3,12 @@ package pageObjects;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import browserFactory.DriversFactory;
 
@@ -108,7 +111,12 @@ public class DemoHlsDashPage extends DriversFactory {
 	
 	//Click on Subtitle
 	public void clk_subtit() throws Throwable{
-		elmsubtit.click();
+		//elmsubtit.click();
+		Actions action = new Actions(driver);
+        action.moveToElement(elmsubtit).perform(); 
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.elementToBeClickable(elmsubtit));
+        elmsubtit.click();
 	}
 	
 	//chinees click element
@@ -121,5 +129,10 @@ public class DemoHlsDashPage extends DriversFactory {
 	}
 	
 	@FindBy(how=How.XPATH,using="//ul[contains(@class,'vjs-menu-content theo-menu-content')]//li[2]//div[1]//div[1]")
-WebElement elmFrench;
+   WebElement elmFrench;
+	
+	//Click on chinees option as subtitle
+		public void clk_subtit_french() throws Throwable{
+			elmFrench.click();
+		}
 }

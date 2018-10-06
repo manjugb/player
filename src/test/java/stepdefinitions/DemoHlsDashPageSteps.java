@@ -34,5 +34,22 @@ public class DemoHlsDashPageSteps extends DriversFactory{
 	public void durtime(String strextime) throws Throwable{
 		new DemoHlsDashPage(wd).ver_dur(strextime);
 	}
+	//click on subtitles
+	@Then("^I Click on Subtitles ON Play Chapter$")
+	public void clk_subt() throws Throwable{
+		new DemoHlsDashPage(wd).clk_subtit();
+	}
+	
+	//Click on French 
+	@Then("^I Click on French Sub Title$")
+	public void clk_subt_french() throws Throwable{
+		new DemoHlsDashPage(wd).clk_subtit_french();
+	}
+	
+	//Click on French 
+		@Then("^I Click on Chinios Sub Title$")
+		public void clk_subt_chinese() throws Throwable{
+			new DemoHlsDashPage(wd).clk_subtit_chinios();
+		}
 
 }

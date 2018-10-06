@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import browserFactory.DriversFactory;
 
@@ -78,6 +79,13 @@ public class RelatedContent extends DriversFactory{
 
 	    }
 	    
+	  //Scroll Bar
+	    public void scroll_bar_related_chrome() throws Throwable{
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;  
+	    	js.executeScript("window.scrollBy(0,1100)");
+
+	    }
+	    
 	    @FindBy(how=How.XPATH,using="//div[@id='yLa1383']//button[contains(@title,'Play Video')]")
 	    WebElement elmylaplay;
 	    
@@ -105,9 +113,9 @@ public class RelatedContent extends DriversFactory{
 //Related Content:Audio ID3 Metadata
   //h1 title
   @FindBy(how=How.XPATH,using="//h1[@class='demoindexheader page-center']")
-  WebElement elmh1audtitle;
-  public void vr_h1title_aud_rel(String streaudtitle) throws Throwable{
-		String strah1rtitle = elmh1audtitle.getText().toString();
+  WebElement elmh1title;
+  public void vr_h1title(String streaudtitle) throws Throwable{
+		String strah1rtitle = elmh1title.getText().toString();
 		if (streaudtitle.equalsIgnoreCase(strah1rtitle)) {
 			Assert.assertEquals(streaudtitle, strah1rtitle);
 			System.out.println(ANSI_GREEN_TEXT + "" + strah1rtitle + "" + "Title Found");
@@ -149,6 +157,57 @@ public class RelatedContent extends DriversFactory{
 		}
 	}
    
+   
+ //CromeCast
+   
+   @FindBy(how=How.XPATH,using="//div[@id='yLa3']//button[@title='Play Video']")
+   WebElement autbhrclik;
+   public void autbr_clik() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(autbhrclik).perform(); 
+       //WebDriverWait wait = new WebDriverWait(driver, 10);
+       //wait.until(ExpectedConditions.elementToBeClickable(elmFirsPlayclick));
+       autbhrclik.click();
+	   
+   }
+   
+   @FindBy(how=How.XPATH,using="//div[@id='yLa1383']//button[@title='Play Video']")
+   WebElement elmmanbrclick;
+   
+   public void manbr_clik() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(elmmanbrclick).perform(); 
+       //WebDriverWait wait = new WebDriverWait(driver, 10);
+       //wait.until(ExpectedConditions.elementToBeClickable(elmFirsPlayclick));
+       elmmanbrclick.click();
+	   
+   }
+   
+//Content Protectioin
+   //listSelect
+   @FindBy(how=How.XPATH,using="//select[@class='demo']")
+   WebElement listSelect;
+   
+   public void listSection(String value) throws Throwable{
+	   Select dropdown = new Select(listSelect);
+	   dropdown.selectByValue(value);
+   }
+   
+   //Verify Note:
+   @FindBy(how=How.XPATH,using="//small[contains(text(),'Note: the DRM example only supports Widevine and P')]")
+   WebElement elmvernote;
+   
+   public void ver_note(String expNote) {
+		String strNote = elmvernote.getText().toString();
+		
+		if (expNote.equalsIgnoreCase(strNote)) {
+			Assert.assertEquals(expNote, strNote);
+			System.out.println(ANSI_GREEN_TEXT + "" + strNote + "" + "Title Found");
+		} else {
+			Assert.assertNotSame("Not Matched", expNote, strNote);
+			System.out.println(ANSI_RED_TEXT + "" + expNote + "" + strNote + "" + "Title Not Found");
+		}
+	}
    
  
   }

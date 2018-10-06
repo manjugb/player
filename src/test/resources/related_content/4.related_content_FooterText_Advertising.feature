@@ -36,3 +36,5 @@ Examples:
 |url|Browser|Linktext|linktext|httitle|
 |https://demo.theoplayer.com|Chrome|//h2[contains(text(),'Related content')]|//a[contains(text(),'Advertising')]|Advertising with VAST 3.0, VMAP And VPAID 2.0 AND Google IMA|
 |https://demo.theoplayer.com|Firefox|//h2[contains(text(),'Related content')]|//a[contains(text(),'Advertising')]|Advertising with VAST 3.0, VMAP And VPAID 2.0 AND Google IMA|
+|https://demo.theoplayer.com|Headless|//h2[contains(text(),'Related content')]|//a[contains(text(),'Advertising')]|Advertising with VAST 3.0, VMAP And VPAID 2.0 AND Google IMA|
+|https://demo.theoplayer.com|Edge|//h2[contains(text(),'Related content')]|//a[contains(text(),'Advertising')]|Advertising with VAST 3.0, VMAP And VPAID 2.0 AND Google IMA|

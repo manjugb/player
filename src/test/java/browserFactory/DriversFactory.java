@@ -1,19 +1,17 @@
 package browserFactory;
-import java.io.File;
+
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Rule;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testcontainers.containers.BrowserWebDriverContainer;
 
 public class DriversFactory {
 
@@ -77,8 +75,12 @@ public class DriversFactory {
     				 caps.setCapability( PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cli_args );
     				wd = new PhantomJSDriver();
     				
-    				
-                   
+    			}else if(browser.equalsIgnoreCase("Edge")) {
+    				DesiredCapabilities caps = new DesiredCapabilities();
+
+  				  caps.setJavascriptEnabled(true);
+    				System.setProperty("webdriver.edge.driver", "./driver/MicrosoftWebDriver.exe");
+    				wd = new EdgeDriver();
     			}
     			wd.get(url);
     			wd.manage().window().maximize();

@@ -35,3 +35,5 @@ Examples:
 |url|Browser|imageName|linktext|atitle|songartist|songtitle|
 |https://demo.theoplayer.com|Chrome|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
 |https://demo.theoplayer.com|Firefox|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Headless|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Edge|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|

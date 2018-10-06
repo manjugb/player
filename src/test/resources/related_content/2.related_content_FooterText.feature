@@ -35,5 +35,7 @@ Examples:
 |url|Browser|FooterText|h1title|h2title|
 |https://demo.theoplayer.com|Chrome|//h2[contains(text(),'Related content')]|Promote similar videos with Related Content|About Related Content|
 |https://demo.theoplayer.com|Firefox|//h2[contains(text(),'Related content')]|Promote similar videos with Related Content|About Related Content|
+|https://demo.theoplayer.com|Headless|//h2[contains(text(),'Related content')]|Promote similar videos with Related Content|About Related Content|
+|https://demo.theoplayer.com|Edge|//h2[contains(text(),'Related content')]|Promote similar videos with Related Content|About Related Content|
 
 	

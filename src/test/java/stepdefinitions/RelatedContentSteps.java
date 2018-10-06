@@ -28,6 +28,12 @@ public class RelatedContentSteps extends DriversFactory {
 		new RelatedContent(wd).scroll_bar_related();
 	}
 	
+	@Then("^I Scroll Vertically ChromeCast$")
+	public void vr_scroll_crome() throws Throwable{
+		
+		new RelatedContent(wd).scroll_bar_related_chrome();;
+	}
+	
 	@Then("^I Click ylaplay$") 
 	public void clk_play_ylam() throws Throwable{
 		new RelatedContent(wd).clickylaplay();
@@ -42,7 +48,7 @@ public class RelatedContentSteps extends DriversFactory {
 //Audio ID3 MA
 	@Then("^I Verify \"([^\"]*)\"audiTitle$")
     public void vr_adhtitle(String strexpadtitle) throws Throwable{
-		new RelatedContent(wd).vr_h1title_aud_rel(strexpadtitle);
+		new RelatedContent(wd).vr_h1title(strexpadtitle);
 	}
 	@Then("^I Verify \"([^\"]*)\"songArtist$")
     public void vr_songartist(String strexsonginfo) throws Throwable{
@@ -52,5 +58,33 @@ public class RelatedContentSteps extends DriversFactory {
     public void vr_songinfo(String strexsonginfo) throws Throwable{
 		new RelatedContent(wd).ver_songtit(strexsonginfo);
 	}
+	
+	@Then("^I Verify \"([^\"]*)\"h1Title$")
+    public void vr_h1title(String strexpadtitle) throws Throwable{
+		new RelatedContent(wd).vr_h1title(strexpadtitle);
+	}
+	
+	//Chrome Cast
+	@Then("^I Click on Auto Behaviour Vedio$")
+	public void aut_bhr() throws Throwable{
+		new RelatedContent(wd).autbr_clik();
+	}
+	
+	@Then("^I Click on Manual Behaviour Vedio$")
+	public void man_bhr() throws Throwable{
+		new RelatedContent(wd).manbr_clik();
+	}
+	
+	//Protected Content
+	@Then("^I Should Select \"([^\"]*)\"listValue$")
+	public void list_sel(String Text) throws Throwable{
+		new RelatedContent(wd).listSection(Text);
+	}
+	
+	@Then("^I Verify \"([^\"]*)\"Note$")
+	public void ver_nt(String expNote) throws Throwable{
+		new RelatedContent(wd).ver_note(expNote);
+	}
+	
 
 }

@@ -33,5 +33,7 @@ Then I Close Browser
 
 Examples:
 |url|Browser|footext|linktext|atitle|songartist|songtitle|
-|https://demo.theoplayer.com|Chrome|//a[contains(text(),'Audio ID3')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
-|https://demo.theoplayer.com|Firefox|//a[contains(text(),'Audio ID3')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Chrome| //h2[contains(text(),'Related content')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Firefox| //h2[contains(text(),'Related content')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Headless| //h2[contains(text(),'Related content')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|
+|https://demo.theoplayer.com|Edge| //h2[contains(text(),'Related content')]|//a[contains(text(),'Audio ID3')]|Audio ID3 Metadata|Greg Guidry|Goin' Down|

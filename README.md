@@ -18,8 +18,8 @@ java and maven needs to be install before running this maven project
 http://maven.apache.org/install.html
 https://www.java.com/en/
 
-Browsers Installed:
-------------------
+Browsers Installed in local system:
+----------------------------------
 Chrome,Firefox,Microsoft Edge
 
 Give examples

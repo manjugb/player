@@ -1,4 +1,4 @@
-Feature:  As a Demo User I Validate Picture in Picture
+Feature:  As a Demo User I Validate Playback speed
 Scenario Outline: Validate links,texts ,Play and Pause actions 
 
 Given I Go to "<url>" on "<Browser>"

@@ -1,4 +1,4 @@
-Feature:  As a Demo User I Validate Picture in Picture
+Feature:  As a Demo User I Validate Playback speed
 Scenario Outline: Validate links,texts ,Play and Pause actions 
 
 Given I Go to "<url>" on "<Browser>"
@@ -35,7 +35,7 @@ Then I Wait Vedio For Some Time
 Then I Close Browser
 
 Examples:
-|url|Browser|FooterText|demolink|h1tit|poption|
+|url|Browser|imageName|demolink|h1tit|poption|
 |https://demo.theoplayer.com|Chrome|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Playback speed')]|Playback Speed with THEOplayer: Slow Motion or High Speed|Options|
 |https://demo.theoplayer.com|Firefox|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Playback speed')]|Playback Speed with THEOplayer: Slow Motion or High Speed|Normal|
 |https://demo.theoplayer.com|Edge|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[2]/div[1]/div[1]/a[1]/div[1]/div[1]/img[1]|//a[contains(text(),'Playback speed')]|Playback Speed with THEOplayer: Slow Motion or High Speed|Normal|

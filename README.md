@@ -34,10 +34,12 @@ mvn clean test
 
 Ecliplse:
 ---------
-# Download project from this repository
-# open Eclipse create workspace
-# File->Open->Import->Existing Maven Project and click on next 
- # successfully import
+Note:Make sure M2E Intalled in Eclipse,but this should come while installed eclipse
+Download project from this repository
+1.open Eclipse create workspace
+2.File->Open->Import->Existing Maven Project and click on next 
+3.successfully import
+4.Right Click on Project->Run as->Maven Test
 
 Jenkins:
 --------

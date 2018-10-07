@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = {"src/test/resources/related_content/33.related_content_ImageClick_SubTitles_CEA_variable.feature"}, glue = {"stepdefinitions"},
+@CucumberOptions(features = {"src/test/resources/"}, glue = {"stepdefinitions"},
                     plugin = {"listener.ExtentCucumberFormatter"},format={"pretty"},tags = {"~@ignore"})
 public class RunCukesTest {
 

@@ -43,8 +43,10 @@ Download project from this repository
 
 Jenkins:
 --------
+
 Before running this build to make sure java and maven should be installed under manage jenkins
 or can be configured local system java and maven using manage jenkins->Global tool configuration
+
 Steps Build:
 ------------
 1.Click on New job

@@ -36,5 +36,5 @@ Then I Close Browser
 
 Examples:
 |url|Browser|strText|h1title|strContent|ctime|durtime|enventlog|
-|https://demo.theoplayer.com|Chrome|Test Your Own HLS / MPEG-DASH|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:05|10:53|Player paused playback|
-|https://demo.theoplayer.com|Firefox|Test Your Own HLS / MPEG-DASH|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:057|10:53|Player paused playback|
+|https://demo.theoplayer.com|Chrome|//a[@href='//demo.theoplayer.com/test-your-stream-with-statistics']//div[@class='card']//div[@class='card-footer']//h2|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:05|10:53|Player paused playback|
+|https://demo.theoplayer.com|Firefox|//a[@href='//demo.theoplayer.com/test-your-stream-with-statistics']//div[@class='card']//div[@class='card-footer']//h2|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:057|10:53|Player paused playback|

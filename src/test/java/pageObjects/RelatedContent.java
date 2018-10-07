@@ -1,6 +1,8 @@
 package pageObjects;
-
-import static org.assertj.core.api.Assertions.*;
+/*@Author:Manjunath GOlla Bala
+ * @Descriptios: Locate objects and creates as WebElements
+ * @Feature:Related Content elements and methods
+ */
 
 import java.util.List;
 

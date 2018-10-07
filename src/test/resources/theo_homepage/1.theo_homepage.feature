@@ -12,3 +12,4 @@ Examples:
 |url|Browser|h1title|cnttext|h3title|
 |https://demo.theoplayer.com|Chrome|Discover what the Universal Video Player can do|Every device. Every platform. No plugins.|Do you want to get started with THEOplayer?|
 |https://demo.theoplayer.com|Firefox|Discover what the Universal Video Player can do|Every device. Every platform. No plugins.|Do you want to get started with THEOplayer?|
+|https://demo.theoplayer.com|Edge|Discover what the Universal Video Player can do|Every device. Every platform. No plugins.|Do you want to get started with THEOplayer?|

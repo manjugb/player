@@ -1,4 +1,8 @@
 package pageObjects;
+/*@Author:Manjunath GOlla Bala
+ * @Descriptios: Locate objects and creates as WebElements
+ * @Feature:Common methods used in all
+ */
 
 import java.util.Iterator;
 import java.util.List;

@@ -1,5 +1,9 @@
 package pageObjects;
 
+/*@Author:Manjunath GOlla Bala
+ * @Descriptios: Locate objects and creates as WebElements
+ * @Feature:AdjustmentTester
+ */
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

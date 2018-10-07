@@ -1,5 +1,8 @@
 package stepdefinitions;
-
+/*@Author:Manjunath GOlla Bala
+ * @Descriptios: Locate objects and creates as WebElements
+ * @Feature: using Given,Then,And will intialize gherkin language
+ */
 import browserFactory.DriversFactory;
 import cucumber.api.java.en.Then;
 import pageObjects.AdjustmentTester;

@@ -35,6 +35,6 @@ Then I Wait Vedio For Some Time
 Then I Close Browser
 
 Examples:
-|url|Browser|strText|h1title|strContent|ctime|durtime|enventlog|
+|url|Browser|imageName|h1title|strContent|ctime|durtime|enventlog|
 |https://demo.theoplayer.com|Chrome|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[1]/a[1]/div[1]/div[1]/img[1]|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:05|10:53|Player paused playback|
 |https://demo.theoplayer.com|Firefox|/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]/div[2]/center[1]/div[1]/nav[1]/div[1]/a[1]/div[1]/div[1]/img[1]|THEOplayer playback statistics|Stream with no limits, in any browser or device with our Universal Video Player. Paste here your stream, then click the LOAD YOUR STREAMING button and experience THEOplayer in action.|00:057|10:53|Player paused playback|

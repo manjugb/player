@@ -287,17 +287,22 @@ public class RelatedContent extends DriversFactory{
 	   
    }
    
-   //Click list element
-   @FindBy(how=How.XPATH,using="//div[contains(@class,'theo-player-wrapper')]//div[11]//div[1]//div[1]//ul[1]")
-   WebElement elmlist;
-   public void list_click(String searchText) throws Throwable{
+   //Click list element play back rate
+   @FindBy(how=How.XPATH,using="//span[contains(@class,'theo-settings-control-menu-item-title')]")
+   WebElement elmplayrt; 
+   public void list_click_pr(String searchText) throws Throwable{
 	   	   //dropdown.click(); // assuming you have to click the "dropdown" to open it
-	   List<WebElement> options = elmlist.findElements(By.tagName("li"));
+	   List<WebElement> options = elmplayrt.findElements(By.tagName("//span"));
 	   for (WebElement option : options)
 	   {
 	       if (option.getText().equals(searchText))
 	       {
-	           option.click(); // click the desired option
+	    	   /*Actions action = new Actions(driver);
+	           action.moveToElement(option).build().perform(); 
+	           WebDriverWait wait = new WebDriverWait(driver, 10);
+	           wait.until(ExpectedConditions.elementToBeClickable(option));*/
+	           option.click();
+	           //option.click(); // click the desired option
 	           break;
 	       }
 	   }
@@ -330,7 +335,7 @@ public class RelatedContent extends DriversFactory{
    WebElement elmplaybackratebut;
    public void playbackrt_click() throws Throwable{
 	   Actions action = new Actions(driver);
-       action.moveToElement(elmplaybackratebut).perform(); 
+       action.moveToElement(elmplaybackratebut).build().perform(); 
        WebDriverWait wait = new WebDriverWait(driver, 10);
        wait.until(ExpectedConditions.elementToBeClickable(elmplaybackratebut));
        elmplaybackratebut.click();

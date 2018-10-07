@@ -118,9 +118,9 @@ public class RelatedContentSteps extends DriversFactory {
 		new RelatedContent(wd).langs_clik();
 	}
 	
-	@Then("^I Choose Language \"([^\"]*)\"Option$")
-	public void list_selec(String langtext) throws Throwable{
-		new RelatedContent(wd).list_click(langtext);
+	@Then("^I Choose Playback \"([^\"]*)\"Option$")
+	public void list_selec(String searchText) throws Throwable{
+		new RelatedContent(wd).list_click_pr(searchText);
 	}
 	
 	@Then("^I Language one click$")
@@ -137,6 +137,8 @@ public class RelatedContentSteps extends DriversFactory {
 	public void playbkrt() throws Throwable{
 		new RelatedContent(wd).playbackrt_click();
 	}
+	
+	
 	
 	
 	

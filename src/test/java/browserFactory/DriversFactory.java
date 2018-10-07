@@ -7,6 +7,7 @@ import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -71,14 +72,17 @@ public class DriversFactory {
 
     				  caps.setJavascriptEnabled(true);
 
-    				 caps.setCapability("takesScreenshot", true);
+    				 caps.setCapability("takesScreenshot", false);
     				 
     				 System.setProperty("phantomjs.binary.path", "./driver/phantomjs");
     				 caps.setCapability( PhantomJSDriverService.PHANTOMJS_CLI_ARGS, cli_args );
     				wd = new PhantomJSDriver();
     				
+    				    
+    			}else if (browser.equalsIgnoreCase("Edge")) {
+    				System.setProperty("webdriver.Microsoft.driver", "./driver/MicrosoftWebDriver.exe");
+    				wd = new EdgeDriver();
     				
-                   
     			}
     			wd.get(url);
     			wd.manage().window().maximize();

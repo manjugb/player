@@ -112,9 +112,31 @@ public class RelatedContentSteps extends DriversFactory {
 	public void ver_tears_clik() throws Throwable{
 		new RelatedContent(wd).tearsclik();
 	}
+//Picture-In-Picture
+	@Then("^I Click on Language on Video Chapter$")
+	public void clk_lang() throws Throwable{
+		new RelatedContent(wd).langs_clik();
+	}
 	
+	@Then("^I Choose Language \"([^\"]*)\"Option$")
+	public void list_selec(String langtext) throws Throwable{
+		new RelatedContent(wd).list_click(langtext);
+	}
 	
+	@Then("^I Language one click$")
+	public void lang1_clk() throws Throwable{
+		new RelatedContent(wd).lang1_click();
+	}
 	
+	@Then("^I Language Two click$")
+	public void lang2_clk() throws Throwable{
+		new RelatedContent(wd).lang2_click();
+	}
+	
+	@Then("^I Click on Playback Rate$")
+	public void playbkrt() throws Throwable{
+		new RelatedContent(wd).playbackrt_click();
+	}
 	
 	
 	

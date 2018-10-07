@@ -12,7 +12,7 @@ Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Click on Pause From Play Chapter
 Then I Click on Subtitles ON Play Chapter
-Then I Wait For Some Time
+Then  I Wait For Some Time
 Then I Click on Chinios Sub Title
 Then I Wait For Some Time
 Then I Click on Subtitles ON Play Chapter

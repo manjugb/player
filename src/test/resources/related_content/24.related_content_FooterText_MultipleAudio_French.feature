@@ -4,6 +4,7 @@ Scenario Outline: Validate links,texts ,Play and Pause actions
 Given I Go to "<url>" on "<Browser>"
 Then I Click On "<footertext>"Image
 Then I Wait For Some Time
+Then I Click on Pause From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Click On "<demolink>"Footer Text

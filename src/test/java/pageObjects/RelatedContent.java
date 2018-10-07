@@ -2,7 +2,10 @@ package pageObjects;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.util.List;
+
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -269,6 +272,70 @@ public class RelatedContent extends DriversFactory{
    public void tearsclik() throws Throwable{
 	   elmtearof.click();
    }
+   
+   //Picture-In-Picture
+   //language button
+   @FindBy(how=How.XPATH,using="//div[contains(@class,'theo-secondary-color vjs-control-bar')]//button[5]")
+   WebElement elmlangbut;
+   
+   public void langs_clik() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(elmlangbut).perform(); 
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+       wait.until(ExpectedConditions.elementToBeClickable(elmlangbut));
+       elmlangbut.click();
+	   
+   }
+   
+   //Click list element
+   @FindBy(how=How.XPATH,using="//div[contains(@class,'theo-player-wrapper')]//div[11]//div[1]//div[1]//ul[1]")
+   WebElement elmlist;
+   public void list_click(String searchText) throws Throwable{
+	   	   //dropdown.click(); // assuming you have to click the "dropdown" to open it
+	   List<WebElement> options = elmlist.findElements(By.tagName("li"));
+	   for (WebElement option : options)
+	   {
+	       if (option.getText().equals(searchText))
+	       {
+	           option.click(); // click the desired option
+	           break;
+	       }
+	   }
+   }
+   //Langauge1 click
+   @FindBy(how=How.XPATH,using="//li[contains(text(),'AAC_und_ch2_128kbps')]")
+   WebElement elmlang1;
+   public void lang1_click() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(elmlang1).perform(); 
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+       wait.until(ExpectedConditions.elementToBeClickable(elmlang1));
+       elmlang1.click();
+   }
+   
+   
+ //Langauge2 click
+   @FindBy(how=How.XPATH,using="//li[contains(text(),'AAC_und_ch2_56kbps')]")
+   WebElement elmlang2;
+   public void lang2_click() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(elmlang2).perform(); 
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+       wait.until(ExpectedConditions.elementToBeClickable(elmlang2));
+       elmlang2.click();
+   }
+   
+   //Playback rate
+   @FindBy(how=How.XPATH,using="//div[contains(@class,'theo-secondary-color vjs-control-bar')]//button[7]")
+   WebElement elmplaybackratebut;
+   public void playbackrt_click() throws Throwable{
+	   Actions action = new Actions(driver);
+       action.moveToElement(elmplaybackratebut).perform(); 
+       WebDriverWait wait = new WebDriverWait(driver, 10);
+       wait.until(ExpectedConditions.elementToBeClickable(elmplaybackratebut));
+       elmplaybackratebut.click();
+   }
+   
    
    
    

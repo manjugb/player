@@ -16,7 +16,7 @@ Then I Wait Vedio For Some Time
 Then I Click on Pause From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
-Then I Click and Pause
+Then I Click on Pause From Play Chapter
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time
 Then I Wait Vedio For Some Time

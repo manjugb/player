@@ -37,5 +37,4 @@ Examples:
 |url|Browser|footertext|demolink|listvalue|Note|
 |https://demo.theoplayer.com|Chrome|//h2[contains(text(),'Related content')]|//a[contains(text(),'Content protection')]|Digital Right Management|Note: the DRM example only supports Widevine and PlayReady.|
 |https://demo.theoplayer.com|Firefox|//h2[contains(text(),'Related content')]|//a[contains(text(),'Content protection')]|Digital Right Management|Note: the DRM example only supports Widevine and PlayReady.|
-|https://demo.theoplayer.com|Headless|//h2[contains(text(),'Related content')]|//a[contains(text(),'Content protection')]|Digital Right Management|Note: the DRM example only supports Widevine and PlayReady.|
 |https://demo.theoplayer.com|Edge|//h2[contains(text(),'Related content')]|//a[contains(text(),'Content protection')]||Digital Right Management|Note: the DRM example only supports Widevine and PlayReady.|
